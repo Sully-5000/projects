@@ -1,0 +1,76 @@
+# Gitignore File
+
+# Purpose:
+# This .gitignore file is intended to provide a comprehensive list of commonly ignored objects in a Git repository. It helps to keep the repository clean and avoids tracking unnecessary files and directories.
+# It also includes specific patterns for ignoring all files in a directory or ignoring a specific file in a directory.
+# Feel free to modify this file based on your project's specific requirements by adding or removing patterns as needed.
+
+# For more information on gitignore patterns, refer to:
+# - https://git-scm.com/docs/gitignore
+
+# Note: Remember to consider the specific needs and requirements of your project when using this gitignore file.
+
+# OS-generated files #
+######################
+.DS_Store
+Thumbs.db
+
+# Editor-specific files #
+#########################
+*.swp
+*.swo
+*.bak
+*.tmp
+*~
+
+# Build output #
+###############
+dist/
+build/
+out/
+output/
+
+# Dependency directories #
+##########################
+node_modules/
+vendor/
+
+# Compiled binaries or libraries #
+##################################
+*.class
+*.o
+*.so
+*.dll
+*.exe
+
+# Logs and databases #
+######################
+*.log
+*.db
+*.sqlite
+
+# IDE-specific files #
+######################
+.idea/
+.vscode/
+
+# Environment-specific files #
+##############################
+.env
+.env.local
+.env.*.local
+
+# Miscellaneous #
+#################
+*.pyc
+*.cache
+
+# Ignore all files in a directory #
+##################################
+# Use the trailing slash to ignore the directory itself but keep its content
+/some-directory/
+
+# Ignore a specific file in a directory #
+########################################
+# Use the full path to the file
+/some-directory/specific-file.txt
