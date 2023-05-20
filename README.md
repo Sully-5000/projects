@@ -1,3 +1,3 @@
 # General projects
 
-General project repo.
+General projects repo.
