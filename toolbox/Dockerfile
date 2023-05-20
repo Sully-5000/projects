@@ -1,3 +1,4 @@
+# For creating an image from a local helm chart
 # Use a base image compatible with Helm and your desired Linux distribution
 FROM alpine:latest
 
