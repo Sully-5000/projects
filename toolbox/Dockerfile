@@ -8,7 +8,7 @@ WORKDIR /helm-charts
 # Define a build argument for the path to the charts
 ARG CHARTS_PATH
 
-# Copy the local Argo CD Helm charts into the image. Use docker build -t <image-name>:<tag> --build-arg CHARTS_PATH=<chart-path/*> <path-to-build-context>
+# Copy the local Argo CD Helm charts into the image. Use docker build -t <image-name>:<tag> --build-arg CHARTS_PATH=<chart-path> <path-to-build-context>
 COPY ${CHARTS_PATH}/* /helm-charts
 
 
