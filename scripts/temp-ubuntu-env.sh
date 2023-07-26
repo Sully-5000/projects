@@ -22,7 +22,7 @@ docker exec -it $CONTAINER_ID bash -c "apt-get update && apt-get install -y vim 
 docker exec -it $CONTAINER_ID bash -c "sh -c \"\$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\" \"\" --unattended"
 
 # Change the theme to 'dst'
-docker exec -it $CONTAINER_ID bash -c "sed -i 's/ZSH_THEME=\"robbyrussell\"/ZSH_THEME=\"fino-time\"/' ~/.zshrc"
+docker exec -it $CONTAINER_ID bash -c "sed -i 's/ZSH_THEME=\"robbyrussell\"/ZSH_THEME=\"random\"/' ~/.zshrc"
 
 # Open a bash shell in the container
 docker exec -it $CONTAINER_ID zsh
