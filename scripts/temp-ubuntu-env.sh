@@ -4,7 +4,7 @@
 
 # Function to clean up the Docker container
 cleanup() {
-  echo "Cleaning up..."
+  echo "Deleting container..."
   docker rm -f $CONTAINER_ID
   echo "Done."
 }
@@ -24,5 +24,8 @@ docker exec -it $CONTAINER_ID bash -c "sh -c \"\$(curl -fsSL https://raw.githubu
 # Change the theme to 'dst'
 docker exec -it $CONTAINER_ID bash -c "sed -i 's/ZSH_THEME=\"robbyrussell\"/ZSH_THEME=\"random\"/' ~/.zshrc"
 
-# Open a bash shell in the container
-docker exec -it $CONTAINER_ID zsh
+# Print a welcome message
+docker exec -it $CONTAINER_ID bash -c "echo 'Welcome! You are now inside the container sandbox. This environment will be deleted upon exiting. Your shell is now zsh.' > /etc/motd"
+
+# Open a zsh shell in the container, with the welcome message
+docker exec -it $CONTAINER_ID bash -c 'zsh -c "cat /etc/motd; exec zsh"'
